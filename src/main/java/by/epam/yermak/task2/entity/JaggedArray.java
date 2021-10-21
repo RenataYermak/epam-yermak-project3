@@ -30,7 +30,6 @@ public class JaggedArray {
             index++;
         } else {
             throw new ArrayIndexOutOfBoundsException();
-
         }
     }
 
