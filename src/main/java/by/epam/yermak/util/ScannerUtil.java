@@ -17,4 +17,10 @@ public class ScannerUtil {
             }
         }
     }
+
+    public static String readString(String text) {
+        System.out.println(text);
+        return scanner.nextLine();
+    }
 }
+

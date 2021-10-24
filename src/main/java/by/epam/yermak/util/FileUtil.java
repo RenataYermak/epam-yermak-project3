@@ -24,4 +24,16 @@ public class FileUtil {
         fr.close();
         return array;
     }
+
+    public static String getTextFromFile(String filePth) throws IOException {
+        FileReader fr = new FileReader(filePth);
+        Scanner scan = new Scanner(fr);
+
+        StringBuilder text = new StringBuilder();
+        while (scan.hasNextLine()) {
+            text.append(scan.nextLine());
+        }
+        return text.toString();
+    }
 }
+

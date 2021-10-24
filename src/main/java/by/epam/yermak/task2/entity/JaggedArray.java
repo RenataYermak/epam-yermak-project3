@@ -24,6 +24,7 @@ public class JaggedArray {
     public int[][] getJaggedArray() {
         return jaggedArray;
     }
+
     public void add(int number) throws ArrayIndexOutOfBoundsException {
         if (index < size) {
             jaggedArray[index][index] = number;
