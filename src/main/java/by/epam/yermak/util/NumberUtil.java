@@ -2,11 +2,9 @@ package by.epam.yermak.util;
 
 public class NumberUtil {
     public static boolean isPrimeNumber(int number) {
-        if (number <= 1) {
-            return false;
-        } else if (number == 2) {
+        if (number == 2) {
             return true;
-        } else if (number % 2 == 0) {
+        } else if (number <= 1 || number % 2 == 0) {
             return false;
         }
         for (int i = 3; i <= Math.sqrt(number); i += 2) {
@@ -30,7 +28,7 @@ public class NumberUtil {
     }
 
     public static boolean isPerfectSquare(int num) {
-        int n = (int)(Math.sqrt(num));
+        int n = (int) (Math.sqrt(num));
         return (n * n == num);
     }
 }

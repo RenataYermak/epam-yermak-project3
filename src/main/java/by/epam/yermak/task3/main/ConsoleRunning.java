@@ -4,11 +4,15 @@ import by.epam.yermak.task3.service.StringService;
 import by.epam.yermak.util.ScannerUtil;
 
 public class ConsoleRunning {
- //   private static final StringService stringService = new StringService();
+
     public static void main(String[] args) {
-        StringService stringService2 = new StringService();
+        StringService stringService = new StringService();
         String text = ScannerUtil.readString("Enter the text");
-        System.out.println(text);
-        System.out.println( stringService2.replaceSymbolOnIndex(text,5,'Y'));
+
+        System.out.println( stringService.replaceSymbolOnIndex(text,6,'Y'));
+        System.out.println(stringService.replaceAWithOAfterP(text,"pa","po"));
+        System.out.println(stringService.replaceWordGivenLengthSubstring(text,3, "mya"));
+        System.out.println(stringService.removeNonLetter(text));
+        System.out.println(stringService.removeWordGivenLengthWithStartConsonant(text,3));
     }
 }

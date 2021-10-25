@@ -14,6 +14,7 @@ public class FileUtil {
             scan.nextInt();
             length++;
         }
+
         int[] array = new int[length];
         fr.close();
         fr = new FileReader(filePth);
@@ -33,6 +34,7 @@ public class FileUtil {
         while (scan.hasNextLine()) {
             text.append(scan.nextLine());
         }
+        fr.close();
         return text.toString();
     }
 }

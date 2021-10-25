@@ -1,7 +1,6 @@
 package by.epam.yermak.task3.service;
 
 public class StringService implements IStringService {
-
     @Override
     public String replaceSymbolOnIndex(String text, int index, char symbol) {
         StringBuilder sb = new StringBuilder();
@@ -60,12 +59,12 @@ public class StringService implements IStringService {
         return sb.toString();
     }
 
+    @Override
     public String removeWordGivenLengthWithStartConsonant(String text, int length) {
         StringBuilder sb = new StringBuilder();
         if (text != null && text.length() > 0) {
             for (String word : text.split(" ")) {
                 if (word.length() == length && isConsonant(word)) {
-                    sb.indexOf(word);
                 } else {
                     sb.append(word).append(" ");
                 }
